@@ -1,0 +1,12 @@
+<div class="container">
+    <span class="mt-4">Count: {{ count.value }}</span>
+    <!-- <span class="mt-4">Count: {{ count() }}</span> -->
+    <span class="mt-4">Multiple count: {{ multiple }}</span>
+    <!-- <span class="mt-4">Multiple count: {{ multiple() }}</span> -->
+    <button 
+        class="mt-4"
+        (click)="increase()"
+    >
+        Increase +1
+    </button>
+</div>
