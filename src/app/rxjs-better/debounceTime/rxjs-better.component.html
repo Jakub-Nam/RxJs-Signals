@@ -1,3 +1,7 @@
-<input [formControl]="searchControl">
+<div class="wrapper">
+    <label for="">RxJs</label>
+    <input [formControl]="searchControl">
 
-<input [ngModel]="searchValue()" (ngModelChange)="searchValue.set($event)">
+    <label for="">Signals</label>
+    <input [ngModel]="searchValue()" (ngModelChange)="searchValue.set($event)">
+</div>

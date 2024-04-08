@@ -1,0 +1,12 @@
+<!-- RxJs -->
+<!-- <div *ngFor="let music of musicList | async">
+    <button  (click)="onMusic(music.path)">{{ music.title }}</button>
+</div> -->
+
+<!-- Signals -->
+<div *ngFor="let music of musicList()">
+    <button  (click)="onMusic(music.path)">{{ music.title }}</button>
+</div>
+<!-- -->
+
+

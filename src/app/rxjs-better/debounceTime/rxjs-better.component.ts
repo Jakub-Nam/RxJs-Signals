@@ -14,33 +14,33 @@ export class RxjsBetterComponent {
   public searchValue = signal('');
   public debouncedSearchValue = signal(this.searchValue());
 
+  public constructor() {
 
-  constructor() {
+    // Signals
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
     effect((onCleanup) => {
       const search = this.searchValue();
 
-
       timeoutId = setTimeout(() => {
         this.debouncedSearchValue.set(search);
       }, 3000);
-
 
       onCleanup(() => {
         clearTimeout(timeoutId);
       });
     });
 
-
     effect(() => {
-      console.log(this.debouncedSearchValue());
+      console.log('Signals', this.debouncedSearchValue());
     });
 
+
+    // RxJs - RED
     this.searchControl.valueChanges.pipe(
       debounceTime(3000),
     ).subscribe(value => {
-      // this.searchControl.(value)
-      console.error(value);
+      console.error('RxJs', value);
     })
+    //
   }
 }

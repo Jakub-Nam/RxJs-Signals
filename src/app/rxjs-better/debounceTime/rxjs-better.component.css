@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    margin: 50px;
+}
+
+label {
+    margin-top: 20px;
+}
